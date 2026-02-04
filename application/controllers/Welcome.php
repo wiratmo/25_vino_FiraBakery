@@ -24,6 +24,6 @@ class Welcome extends CI_Controller {
 	}
 
 	public function tentang(){
-        $this->Template->load('user/template','user/tentang');
+        $this->template->load('user/template','user/tentang');
     }
 }

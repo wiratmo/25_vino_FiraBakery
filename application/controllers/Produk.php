@@ -19,7 +19,7 @@ class Produk extends CI_Controller {
         $grouped[$g->id_produk][] = $g;
     }
     $data['gambar'] = $grouped;
-        $this->Template->load('dashboard','produk', $data);
+        $this->template->load('dashboard','produk', $data);
     }
     
     public function simpan()
@@ -79,7 +79,7 @@ class Produk extends CI_Controller {
             show_404();
         }
     
-        $this->Template->load('user/template', 'user/produk_detail', $data);
+        $this->template->load('user/template', 'user/produk_detail', $data);
     } 
 
     public function kategori($id_kategori)
@@ -93,7 +93,7 @@ class Produk extends CI_Controller {
         // ambil random images (BIAR TIDAK ERROR)
         $data['random_images'] = $this->Produk_model->get_random_images(6);
     
-        $this->Template->load('user/template','user/main', $data);
+        $this->template->load('user/template','user/main', $data);
     }
     
 
@@ -108,7 +108,7 @@ class Produk extends CI_Controller {
     // untuk menampilkan kategori di dropdown filter
     $data['kategori'] = $this->db->get('kategori')->result();
 
-    $this->Template->load('user/template','user/main', $data);
+    $this->template->load('user/template','user/main', $data);
 }
 
     public function shop()
@@ -147,7 +147,7 @@ class Produk extends CI_Controller {
         $data['kategori'] = $this->Kategori_model->get_all();
         $data['pagination'] = $this->pagination->create_links();
     
-        $this->Template->load('user/template', 'user/shop', $data);
+        $this->template->load('user/template', 'user/shop', $data);
     }
   
     public function add_to_cart($id_produk)

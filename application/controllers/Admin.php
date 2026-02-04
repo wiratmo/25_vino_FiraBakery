@@ -11,6 +11,6 @@ class Admin extends CI_Controller {
     } 
 	public function index()
 	{
-		$this->Template->load('dashboard','home');
+		$this->template->load('dashboard','home');
 	}
 }

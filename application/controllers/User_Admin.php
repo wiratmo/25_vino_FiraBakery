@@ -13,7 +13,7 @@ class User_Admin extends CI_Controller {
     public function index() {
         $data['users'] = $this->User_model->get_all();
         // Tetap gunakan template sesuai versi awal
-        $this->Template->load('dashboard', 'user', $data);
+        $this->template->load('dashboard', 'user', $data);
     }
 
     public function save() {

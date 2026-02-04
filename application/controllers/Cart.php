@@ -20,7 +20,7 @@ public function index()
     $id_user = $this->session->userdata('id_user');
     $data['cart_header'] = $this->Produk_model->getCartHeader($id_user);
 
-    $this->Template->load('user/template','user/cart', $data);
+    $this->template->load('user/template','user/cart', $data);
 }
 
 public function update()

@@ -15,7 +15,7 @@ public function kelola($id_produk)
     $data['fotos'] = $this->Foto_model->get_by_produk($id_produk);
     $data['id_produk'] = $id_produk;
 
-    $this->Template->load('dashboard', 'gambar/kelola', $data);
+    $this->template->load('dashboard', 'gambar/kelola', $data);
 }
 
 // form tambah foto
