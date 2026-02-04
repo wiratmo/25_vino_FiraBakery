@@ -74,11 +74,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'toko_roti',
+	'dsn'      => '',
+	'hostname' => getenv('DB_HOST') ?: 'localhost',
+	'username' => getenv('DB_USERNAME') ?: 'root',
+	'password' => getenv('DB_PASSWORD') ?: '',
+	'database' => getenv('DB_DATABASE') ?: 'toko_roti',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
