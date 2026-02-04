@@ -33,6 +33,7 @@ RUN chown -R www-data:www-data /var/www/html \
 
 # Copy nginx config
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY default.conf /etc/nginx/conf.d/default.conf
 
 # Expose port
 EXPOSE 80
