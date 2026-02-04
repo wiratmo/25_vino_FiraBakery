@@ -22,14 +22,15 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
         zip
 
 # Set working directory
-WORKDIR /app
+WORKDIR /var/www/html
 
 # Copy project
 COPY . .
 
 # Set permissions (important for CI3)
-RUN chown -R www-data:www-data /app \
-    && chmod -R 755 /app
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 755 /var/www/html
+
 
 # Expose port
 EXPOSE 80
