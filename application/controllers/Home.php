@@ -27,7 +27,7 @@ class Home extends CI_Controller {
 
         $data['id_kategori_aktif'] = $id_kategori;
 
-        $this->template->load('user/template', 'user/main', $data);
+        $this->Template->load('user/template', 'user/main', $data);
     }
 
 }

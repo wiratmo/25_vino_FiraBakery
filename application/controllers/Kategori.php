@@ -20,7 +20,7 @@ class Kategori extends CI_Controller {
             'flaticon-005-pancake',
             'flaticon-006-macarons'
         ];
-        $this->template->load('dashboard','kategori', $data);
+        $this->Template->load('dashboard','kategori', $data);
     }
 
     public function save()
@@ -42,7 +42,7 @@ class Kategori extends CI_Controller {
                 'flaticon-005-bread',
                 'flaticon-006-ice-cream'
             ];
-            $this->template->load('dashboard','kategori', $data);
+            $this->Template->load('dashboard','kategori', $data);
         }
     }
     
@@ -75,6 +75,6 @@ public function delete($id)
     }
 
     public function kontak(){
-        $this->template->load('user/template','user/kontak');
+        $this->Template->load('user/template','user/kontak');
     }
 }
